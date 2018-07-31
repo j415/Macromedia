@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>淘宝</title>
+<style>
+a{ font-size:12px; color:#666666; text-decoration:none}
+*{ margin:0; padding:0}
+.banner{ padding-left:30px; height:100px}
+.content{ background-image:url(bg.jpg); background-position:top center}
+.login{ width:350px; height:335px; background-color:#f1e9fd; margin-right:100px; padding:20px 30px}
+.login_text{ height:37px;  width:240px}
+.btn{ width:300px; height:42px; background-image:url(btn.jpg); border:none}
+.foot{ font-size:12px; line-height:28px; color:#666666; width:1200px; margin:0 auto}
+.foot_1{margin:0 auto;  width:1200px; border-top:solid 1px #dddddd; border-bottom:solid thin #dddddd; height:50px}
+</style>
+
+<script>
+function checkAll(){
+     if(checkName() && checkPass()){
+	    return true;
+	 }
+	 return false;
+  }
+
+  function checkName(){
+     var name=document.getElementById("name").value;
+     if(name.length==0){
+	    alert("用户名不能为空");
+		document.getElementById("name").focus();//获得鼠标光标（获得焦点）
+		//document.表单名.表单元素名.focus()
+		return false;
+	 }
+	 if(name.length>4){
+	   alert("用户名太长");
+	   document.getElementById("name").select();//选中文本内容，突出显示输入区域
+		return false;
+	 }
+
+	    for(var i=0;i<name.length;i++){
+		    var names=name.charAt(i);
+			if(names<=9 || names>=0){
+			  alert("用户名不能包含数字");
+			  return false;
+			}
+		}
+
+	 return true;
+  }
+  
+  function checkPass(){
+   var pass=document.getElementById("pass").value;
+     if(pass.length==0){
+	    alert("密码不能为空");
+		return false;
+	 }
+	 if(pass.length<6){
+	    alert("密码长度不少于6位");
+		return false;
+	 }
+  return true;
+  }
+</script>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="banner">
+  <tr>
+    <td><img src="logo.jpg" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="content" height="600">
+  <tr>
+    <td>
+	
+	<!--登录开始-->
+<form name="form" action="http://www.baidu.com" onsubmit="return checkAll()"> 
+<table width="300" border="0" align="right" cellpadding="0" cellspacing="0" class="login">
+  <tr>
+    <td colspan="2"><h3>账户登录</h3></td>
+    </tr>
+  <tr>
+    <td align="right"><img src="name.jpg" width="41" height="42" /></td>
+    <td align="left"><input  type="text" class="login_text"  id="name" /></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="pass.jpg" width="41" height="43" /></td>
+    <td align="left"><input  type="password" class="login_text" id="pass" /></td>
+  </tr>
+  
+    <tr>
+    <td colspan="2">
+	
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td>&nbsp;<a href="#">忘记登录密码</a></td>
+				<td align="right"><a href="#">免费注册</a>&nbsp;</td>
+			  </tr>
+		  </table>
+
+	</td>
+    
+  </tr>
+  
+  <tr>
+    <td colspan="2" align="center"><input type="submit" class="btn"  value="" /></td>
+    </tr>
+	
+  <tr>
+    <td colspan="2"><img src="wb.png" width="19" height="19" align="absmiddle" /><a href="#">微博登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<img src="zfb.png" width="18" height="19" align="absmiddle" /><a href="#">支付宝登录</a></td>
+    </tr>
+
+</table>
+</form>
+	
+	<!--登录结束-->
+	
+	
+	</td>
+  </tr>
+</table>
+<br /><br />
+
+
+<!--底部开始-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="foot_1">
+  <tr>
+    <td> <a href="http://page.1688.com/shtml/about/ali_group1.shtml">阿里巴巴集团</a>
+    |
+    <a href="http://www.alibaba.com">阿里巴巴国际站</a>
+    |
+    <a href="http://www.1688.com">阿里巴巴中国站</a>
+    |
+    <a href="http://www.aliexpress.com">全球速卖通</a>
+    |
+    <a href="http://www.taobao.com">淘宝网</a>
+    |
+    <a href="http://www.tmall.com">天猫</a>
+    |
+    <a href="http://ju.taobao.com">聚划算</a>
+    |
+    <a href="http://www.etao.com">一淘</a>
+    |
+    <a href="http://www.alimama.com">阿里妈妈</a>
+    |
+    <a href="http://trip.taobao.com">淘宝旅行</a>
+    |
+    <a href="http://www.xiami.com">虾米</a>
+    |
+    <a href="http://www.aliyun.com">阿里云计算</a>
+    |
+    <a href="http://www.yunos.com">云OS</a>
+    |
+    <a href="http://www.net.cn">万网</a>
+    |
+    <a href="http://www.alipay.com">支付宝</a>
+    |
+    <a href="http://www.laiwang.com/">来往</a></td>
+  </tr>
+ 
+</table>
+
+
+
+
+<table border="0" cellspacing="0" cellpadding="0" class="foot">
+ 
+  <tr>
+    <td><a href="#">关于淘宝</a>
+	<a href="#">合作伙伴</a>
+	<a href="#">营销中心</a>
+	<a href="#">廉正举报</a>
+	<a href="#">联系客服</a>
+	<a href="#">开放平台</a>
+	<a href="#">诚征英才</a>
+	<a href="#">联系我们</a>
+	<a href="#">网站地图</a>
+	<a href="#">法律声明</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<em>&copy; 2016 Taobao.com 版权所有</em><br />
+    网络文化经营许可证：<a href="#">文网文[2010]040号</a>&nbsp;|&nbsp;增值电信业务经营许可证：浙B2-20080224-1&nbsp;|&nbsp;信息网络传播视听节目许可证：1109364号</td>
+  </tr>
+   <tr>
+    <td><img src="wj.gif" /></td>
+  </tr>
+
+</table>
+
+</body>
+</html>
